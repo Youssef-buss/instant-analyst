@@ -1,0 +1,18 @@
+# Node
+node_modules/
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# ML outputs
+charts/
+uploads/
+
+# Frontend
+dist/
+build/
+
+# OS
+.DS_Store

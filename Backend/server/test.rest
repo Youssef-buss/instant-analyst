@@ -1,0 +1,34 @@
+
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "first_name": "yossef",
+  "last_name": "Ahmed",
+  "email": "konafa@gmail.com",
+  "password": "12345666"
+}
+
+###
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+  "email": "konafa@gmail.com",
+  "password": "12345666"
+}
+
+###
+GET http://localhost:5000/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJrb25hZmFAZ21haWwuY29tIiwiaWF0IjoxNzc1OTA5MjQ2LCJleHAiOjE3NzU5MTI4NDZ9.moqmmBZZoCmGEoKtWh_DX82OC4XMod8VuD7e9U1pZYE
+###
+
+POST http://127.0.0.1:8000/analyze
+Content-Type: multipart/form-data; boundary=----MyBoundary
+
+------MyBoundary
+Content-Disposition: form-data; name="file"; filename="nyc2019.csv"
+Content-Type: text/csv
+
+< ./nyc2019.csv
+------MyBoundary--
